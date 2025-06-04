@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.datatransfer.DataFlavor;
@@ -124,6 +125,20 @@ public class DegradeImageApp extends JFrame {
         sliderPanel.add(saveButton);
 
         add(sliderPanel, BorderLayout.SOUTH);
+
+        // コピーライトは右上に別パネルで表示
+        JPanel southPanel = new JPanel(new BorderLayout());
+        southPanel.add(sliderPanel, BorderLayout.CENTER);
+
+        JLabel copyrightLabel = new JLabel("© 2025 Yorikawa Aise");
+        copyrightLabel.setHorizontalAlignment(JLabel.RIGHT);
+        copyrightLabel.setFont(new Font("SansSerif", Font.PLAIN, 10));
+        JPanel copyrightPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        copyrightPanel.add(copyrightLabel);
+
+        southPanel.add(copyrightPanel, BorderLayout.NORTH);
+
+        add(southPanel, BorderLayout.SOUTH);
 
         // ラベルの画像を中央寄せ
         originalLabel.setHorizontalAlignment(JLabel.CENTER);
