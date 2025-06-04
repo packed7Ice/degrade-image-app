@@ -1,7 +1,7 @@
 # degrade-image-app
 produced by chatgpt
 
-[秋雨さんの企画](https://x.com/shigureninani/status/1918291648490160280)に提出したアプリです 
+[企画](https://x.com/shigureninani/status/1918291648490160280)に提出したアプリです 
 
 画像をドラッグ＆ドロップして様々な劣化エフェクト（ノイズ、減色、シャッフル、グリッチ、ブロック化）を適用し、比較・保存できる Java Swing アプリケーションです。
 
